@@ -6,4 +6,10 @@
 
 按关键字全局搜索：`<Leader> + fw`
 
-打开终端界面：`<Leader> + tt`
+打开新终端并进入终端模式：`<Leader> + h` 或 `<Leader> + v`
+
+退出终端模式： `<C> + x`
+
+关闭Buffer： `<Leader> + x`
+
+进入/退出全屏： `Cmd + Enter`
