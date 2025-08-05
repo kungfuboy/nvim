@@ -14,3 +14,15 @@ vim.opt.fileencodings = "ucs-bom,utf-8,gbk,gb18030,gb2312,cp936,big5,euc-jp,euc-
 
 -- 启用 termguicolors 以获得更好的颜色支持，这与乱码无直接关系，但强烈推荐
 vim.opt.termguicolors = true
+
+vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    },
+    paste = {
+        ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+    },
+}
