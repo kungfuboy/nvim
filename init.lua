@@ -1,6 +1,8 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+vim.cmd("colorscheme nord")
+
 -- 设置 Neovim 内部使用的编码，必须是 utf-8
 vim.opt.encoding = "utf-8"
 
