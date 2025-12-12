@@ -6,6 +6,8 @@ vim.cmd("colorscheme nord")
 -- 设置 Neovim 内部使用的编码，必须是 utf-8
 vim.opt.encoding = "utf-8"
 
+vim.opt.modifiable = true
+
 -- 设置文件保存时的默认编码
 vim.opt.fileencoding = "utf-8"
 
@@ -18,13 +20,13 @@ vim.opt.fileencodings = "ucs-bom,utf-8,gbk,gb18030,gb2312,cp936,big5,euc-jp,euc-
 vim.opt.termguicolors = true
 
 vim.g.clipboard = {
-    name = "OSC 52",
-    copy = {
-        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-        ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-    },
-    paste = {
-        ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-        ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
-    },
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+  },
 }
